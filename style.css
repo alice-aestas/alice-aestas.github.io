@@ -1,0 +1,275 @@
+/*```````````````之後wholepage的寬高要根據手機 電腦螢幕大小去改@media screen and (max-width:721px)*header padding應該要重新設定，標題字的大小可能也需要`````````````linear-gradient(180deg, #515a5c,#515c5e);``*/
+
+@charset"UTF-8";
+
+/*********************************總版面設定****************/
+.top{
+	color: white;
+	background-image: url(leaf4.jpg); background-repeat :  ;background-size:300px; 
+	font-size: 24px; text-align: center;
+	line-height: 50px;
+
+}
+.header{
+	position: sticky;
+	top:0;
+	color: white;
+	background : linear-gradient(180deg, #515c5e , #555458);
+	box-shadow:0 4px 5px 1px gray;
+}
+.content{
+	color: #4e5242;
+	background-color: #d8dbe1;
+	font-size: 24px; text-align: left;
+	line-height: 20px;
+	text-align: center;
+}
+.sidebar{
+	color: #4e5242;
+	background-color: #cdd2cc;
+	font-size: 24px; text-align: left;
+	line-height: 20px;
+
+	.sidebarbox{
+	}
+}
+.footer{
+	background-color: #545c5e;
+	font-size: 10px; text-align: center;
+}
+
+.iframebig{
+	height:1985px ; width:97%; 
+	border: solid 2px black;
+	padding: 5px 1%;
+	scrolling: auto;
+}
+
+/*********************************版面排版+大小****************/
+@media screen and (max-width:721px){
+	#wholepage{
+		width: 100%; height: px;
+		padding: 0px;
+		margin: 0px auto; 
+	}
+	.top{
+		height: 200px;
+	}
+	.header{
+		height:43px;
+		padding:6px 0 0 0;
+		text-align:center;
+		.titleli{
+			width:17%; height: 34px;
+			line-height: 34px;
+			font-size: 12px; 
+	 		letter-spacing: -1px;
+			&:hover a{   
+				font-size: 13px; 	}
+			&:active a{   
+				font-size: 12.5px; 	}
+		}
+		#titleli1{
+			display: none;
+		}
+	}
+	.content{
+		height: 2000px;
+		padding: 10px;
+	}
+	.sidebar{
+		height: 20px;
+		padding: 10px;
+	}
+
+	.footer{
+		height: 60px;
+		padding: 14px 10px 6px 10px;
+	}
+}
+
+@media screen and (min-width:721px){
+	#wholepage{
+		width: 100%; height: px;
+		padding: 0px;
+		margin: 0px auto; 
+	}
+	.top{
+		height: 200px;
+	}
+	.header{
+		height:43px;
+		padding:6px 0 0 1%;
+		margin: 0 0 2px 0 ;
+		text-align:center;
+		.titleli{
+			width:15%; height: 34px;
+			margin: 0 0.5%0 0.5%;
+			line-height: 34px;
+			font-size: 13px; 
+			float: left;	
+			&:hover a{   
+				font-size: 14px; 	}
+			&:active a{   
+				font-size: 13.5px; 	}	
+			#titleli1{
+				width:120px;	}
+		}
+		#titleli1{
+	 		letter-spacing: ;
+			font-size: 18px;
+			border: solid 2px rgba(1,1,1,0);  
+			background-color: transparent;
+			box-shadow: none;
+		}
+	}
+	.content{
+		height: 2000px;
+		width: 80%;
+		float: left;
+		padding: 1.25%;
+	}
+	.sidebar{
+		height: 2000px;
+		width: 15%;
+		padding: 1.25%;
+		float:left;
+	}
+
+	.footer{
+		height: 60px;
+		padding: 14px 10px 6px 10px;
+		clear: both;
+	}
+}
+
+}
+	
+
+
+
+
+/************all the same&不跟版面動的********超連結底線**/
+a{text-decoration:none}
+
+
+/*************header裡的東西***************/
+/*```````````````換華麗一點的字體```````transition 一起設定```````*/
+.titleli{
+	display: inline-block;
+	border: solid 2px #e5efef;  border-radius:1px;
+	background-color: white;
+	box-shadow: 0.5px 0.3px 2px #353f3f;
+	text-align: center;
+	a{
+ 		color: black;
+		font-weight:bold; 
+		text-transform: uppercase;  ; 
+	}
+	&:hover a{   
+	color: white; 	}
+	&:active a{   
+	color: yellow; 	}
+}
+
+.titlealways{
+	text-align: center;
+	font-size: 16px; color: #e5efef; font-weight:bold; text-transform: uppercase; text-shadow:0.5px 0.3px 3px #151f1f;
+}
+
+
+/************footer裡的東西*************************/
+.footera:link{color: #a2b9cf}
+.footera:hover{color: #e3e2e2}
+.footera:active{color:#02192f}
+.footera:visited{color:#837e92}
+.footera{text-decoration: underline}
+
+.ftable{
+	padding: 7px;
+	color:#a3aeb2;
+}
+
+.cellpadding{
+	color:#545c5e;
+}
+
+
+
+/************CHARACTERS中的設定**********/
+
+.characbox{
+	height:150px; width:135px;
+	float: left;
+	border;
+	margin:1%;
+	background-color: #2a2f2f;
+	text-align: center; 
+	transition: background 2s linear;
+	a{
+		color: white; font-size: 14px; color: #e5efef; font-weight:bold;
+		transition: color 1s;}
+	&:hover {
+		background-color: yellow;
+		a{
+		color:red;
+	}}
+	&:active a{
+		color:green;
+	}
+	&:active{
+		background-color: white;
+	}
+	.characphoto{
+		height:90px; ;
+		border: solid 1px black;
+		margin: 10px auto 2px auto;
+		border: 
+	}
+	i{
+	text-aline: center;
+	color: blue;}
+}
+
+
+
+.characintrobox {
+	display: none;
+	clear: both;
+	border: solid 5px gray;
+	background-color: white;
+	margin: 0 auto 20px auto;
+	width:95%; 
+	font-size: 14px; color: #353f3f;	
+	transition: opacity 1s;
+	&:target{
+		display: inline-block;
+		.characbox{
+			background-color: white;
+		}
+	}
+}
+
+
+.disscutioninside{
+	h1{
+
+	}
+	li{	color: ;		
+		text-indent:  ;
+
+	}
+
+	b{		color: ;		
+	}
+}
+
+
+
+
+
+
+
+
+
+

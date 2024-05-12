@@ -1,0 +1,10 @@
+ul{list-style-image:url(heart.gif);margin-left:50px}
+#content h1, #sidebar h1 {
+margin: 10px;
+font-size: 125%;
+padding: 3px;
+border-bottom: 1px solid #FCCAC3;
+border-top: 1px solid #FCCAC3;
+color: #000000;
+background: inherit;
+}
