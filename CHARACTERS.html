@@ -5,11 +5,15 @@
 	<title>CHARACTERS</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-
+    <script>
+        function resize() {
+        parent.document.getElementById("iframebig").height = document.body.scrollHeight; //將子頁面高度傳到父頁面框架
+    }
+    </script>
 
 </head>
 
-<body >
+<body onload="resize();">
 	<div class="characbox" ><a href="#characintroboxa">
 		<img class="characphoto"  alt="Candentia Sarshea Hyacinth" src=image/a.jpg>
 		<br>Candentia Sarshea Hyacinth
