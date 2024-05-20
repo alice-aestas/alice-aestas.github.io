@@ -8,12 +8,14 @@
 <script type="text/javascript">
 function SetCwinHeight() {
     var iframeid = document.getElementById("iframebig"); 
+
     if (document.getElementById) {
         if (iframeid && !window.opera) {
             if (iframeid.contentDocument && iframeid.contentDocument.body.offsetHeight) {
-                iframeid.height = iframeid.contentDocument.body.offsetHeight;
+                iframeid.height = iframeid.contentDocument.body.offsetHeight;	
             } else if (iframeid.Document && iframeid.Document.body.scrollHeight) {
                 iframeid.height = iframeid.Document.body.scrollHeight;
+	 console.log('xxx');
             }
         }
     }
@@ -38,7 +40,7 @@ function SetCwinHeight() {
 		<div class="titleli"><a href="DISCUSSION.html" target=content>Discussion</a></div>
 	</div>
 
-    <div class="content"><iframe name=content class="iframebig" id="iframebig" onload="Javascript:SetCwinHeight()" src="HOME.html">​</iframe></div>
+    <div class="content"><iframe name=content class="iframebig" id="iframebig" onload="Javascript:SetCwinHeight()">​</iframe></div>
 	
 
     <div class="sidebar"><div class="sidebarbox">Sidebar</div></div>
