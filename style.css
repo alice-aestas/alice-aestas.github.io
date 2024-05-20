@@ -1,8 +1,11 @@
 /*```````````````之後wholepage的寬高要根據手機 電腦螢幕大小去改@media screen and (max-width:721px)*header padding應該要重新設定，標題字的大小可能也需要`````````````linear-gradient(180deg, #515a5c,#515c5e);``*/
+/*````````github指令 git add text.html (把檔案放進git資料庫;if 要直接指整個資料夾裡的檔案都加進去，把"text.html"改成"."); git commit -m "註釋" (存檔入資料庫); git push -u=讓他把後面字串自動化的設定 名字=origin 網域=master `````````*/
 
 @charset"UTF-8";
 
 /*********************************總版面設定****************/
+
+
 .top{
 	color: white;
 	background-image: url(leaf4.jpg); background-repeat :  ;background-size:300px; 
@@ -39,10 +42,9 @@
 }
 
 .iframebig{
-	height:1985px ; width:97%; 
-	border: solid 2px black;
+	height:99% ; width:97%; 
 	padding: 5px 1%;
-	scrolling: auto;
+	scrolling: no;
 }
 
 /*********************************版面排版+大小****************/
@@ -74,7 +76,7 @@
 		}
 	}
 	.content{
-		height: 2000px;
+
 		padding: 10px;
 	}
 	.sidebar{
@@ -124,13 +126,13 @@
 		}
 	}
 	.content{
-		height: 2000px;
+
 		width: 80%;
 		float: left;
 		padding: 1.25%;
 	}
 	.sidebar{
-		height: 2000px;
+
 		width: 15%;
 		padding: 1.25%;
 		float:left;
@@ -251,22 +253,121 @@ a{text-decoration:none}
 }
 
 
+/************DISCUSSION*******************/
+
 .disscutioninside{
 	h1{
-	color: red;
+	color: black;
 	}
 	li{	color: ;		
 		text-indent:  ;
-
 	}
-
 	b{		color: ;		
+	}
+	.longword{
+		word-break: break-all;
+	}
+	
+	.popup{  
+		position: fixed;
+ 		top: 0;
+ 		bottom: 0;
+  		left: 0;
+ 	 	right: 0;
+  		background: rgba(0,0,0,0.8);
+  		transition: opacity 200ms;
+  		visibility: hidden;
+  		opacity: 0;
+		.popupcontent{
+    			position: relative;
+			top:100px;
+			margin: auto;
+			height:100px;
+			width: 240px;
+			background: #b4b5b3;
+			border: solid 3px #949593;
+			border-radius: 5px;
+			color:#444543;
+			text-align: center;
+		}
+		.cancel {
+	    		position: fixed;
+	    		width: 100%;
+    			height: 100%;
+    			cursor: default;
+		}
+ 		&:target {
+    			visibility: visible;
+    			opacity: 1;
+		}
 	}
 }
 
 
+/*************************chapters 裏的東西們************/
+.chaptera:link{color: #a2b9cf}
+.chaptera:hover{color: #e3e2e2}
+.chaptera:active{color:#02192f}
+.chaptera:visited{color:#837e92}
 
+.chapterfloatontop{
+	position: sticky;
+	top:0;
+	width: 100%;
+	height: 50px;
+	background: #fff /*換成跟背景一樣*/;
+	text-align: center;
+	div[class*="backandnext"]{
+		position: relative;
+		height: 50px; line-hdight: 50px;
+		display: inline-block;
+		margin: 0 15px;
+	}
+	.backandnexttransparent{
+		visibility: hidden;
+	}
+}
 
+h2{
+	text-align: center;
+}
+
+.chaptercontent{
+	text-align: justify;
+	text-indent: 2em;
+	p{
+		margin:3px 3px;
+
+	}
+	.p{
+		margin:25px 3px 5px 3px;
+	}	
+	.pend{
+		margin: 5px 3px 25px 3px;
+	}
+	.b{
+		font-size: 25px;
+	}
+}
+
+.nextchapter{
+	width:100%;
+	display: block;
+	margin: 5px auto 0px auto;
+	text-align: center;
+	h2{
+		text-align: center;
+		line-height: 45px;
+		margin: auto;
+		border: solid 3px #a9a8a9;
+		border-radius: 4px;
+		&:hover{
+			box-shadow: inset -1px -1px 6px 1px #a9a8a9;
+			cursor: pointer;
+		}
+	}
+
+}
 
 
 

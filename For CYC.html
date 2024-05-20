@@ -4,24 +4,13 @@
 	<meta charset= "utf-8">
 	<title>For CYC</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<script>
-	$(function(){
-   	 function receiveMessageFromIframePage (event) {
-      	  var height = ('receiveMessageFromIframePage',event.data.h);
-      	  console.log(height);//接收source.html頁面所回傳的高度值
-       		 $('#iframebig').height(height);//將取得的高度，變更myIframe高度
-	
-    }
-    window.addEventListener("message", receiveMessageFromIframePage, false);//監聽receiveMessageFromIframePage
-});
-</script>
+
 
 </head>
 
 
 
-<body >
+<body>
 <!--  div:要把header等等的字拿掉-->
 
 <div id="wholepage">
@@ -36,7 +25,7 @@
 		<div class="titleli"><a href="DISCUSSION.html" target=content>Discussion</a></div>
 	</div>
 
-    <div class="content"><iframe name=content class="iframebig" id="iframebig" src="CHARACTERS.html">​</iframe></div>
+    <div class="content"><iframe name=content class="iframebig" >​</iframe></div>
 	
 
     <div class="sidebar"><div class="sidebarbox">Sidebar</div></div>
