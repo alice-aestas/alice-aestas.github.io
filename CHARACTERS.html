@@ -5,16 +5,16 @@
 	<title>CHARACTERS</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script>	console.log('xxx');
-        function resize() {
-        parent.document.getElementById("iframebig").height = document.body.scrollHeight; 
-    };
-
-    </script>
+<script>
+    $(function(){
+        var _h = $(document).height();//取得網頁高度
+        parent.postMessage({ h: _h}, '*');//將高度值，傳到父層
+    });    	console.log('xxx');
+</script>
 
 </head>
 
-<body onload="resize();">
+<body >
 	<div class="characbox" ><a href="#characintroboxa">
 		<img class="characphoto"  alt="Candentia Sarshea Hyacinth" src=image/a.jpg>
 		<br>Candentia Sarshea Hyacinth

@@ -5,7 +5,17 @@
 	<title>For CYC</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-
+<script>
+	$(function(){
+   	 function receiveMessageFromIframePage (event) {
+      	  var height = ('receiveMessageFromIframePage',event.data.h);
+      	  console.log(height);//接收source.html頁面所回傳的高度值
+       		 $('#iframebig').height(height);//將取得的高度，變更myIframe高度
+		$('#sidebarbox').height(height);
+    }
+    window.addEventListener("message", receiveMessageFromIframePage, false);//監聽receiveMessageFromIframePage
+});
+</script>
 </head>
 
 
@@ -25,10 +35,11 @@
 		<div class="titleli"><a href="DISCUSSION.html" target=content>Discussion</a></div>
 	</div>
 
-    <div class="content"><iframe name=content class="iframebig" id="iframebig">​</iframe></div>
+    <div class="content"><iframe name=content class="iframebig" id="iframebig" src="STORY.html">​</iframe></div>
 	
 
-    <div class="sidebar"><div class="sidebarbox">Sidebar</div></div>
+    <div class="sidebar" ><div class="sidebarbox" id="sidebarbox">Sidebar</div></div>
+
 
     <div class="footer">FOR YOUR INFORMATION
 	<table class="ftable" align=center>

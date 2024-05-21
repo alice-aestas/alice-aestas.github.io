@@ -5,8 +5,12 @@
 	<title>DISCUSSION.html</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-
-
+<script>
+    $(function(){
+        var _h = $(document).height();//取得網頁高度
+        parent.postMessage({ h: _h}, '*');//將高度值，傳到父層
+    });    	console.log('xxx');
+</script>
 </head>
 
 <body>
@@ -18,10 +22,10 @@
 			<p>click here</a></p>
 		</div>
 		<div id="popup" class="popup">
-		 <a class="cancel" href="#"></a>		<div class="popupcontent">
-
-			<h3>彈跳視窗示範</h3>
-			<p>點框框外面可以跳離視窗</p>
+			 <a class="cancel" href="#"></a>		
+			<div class="popupcontent">
+				<h3>彈跳視窗示範</h3>
+				<p>點框框外面可以跳離視窗</p>
 	</div></div></li><br>
 	<li><b>轉場效果</b><br>我在查一其他事情的時候偶然間學到transition這個指令，他讓整個畫面看起來更有完整性，超級喜歡!!</li><br>
 	<li><b>Target</b><br>我把它用來讓物件從隱藏到顯現。是我學彈跳視窗後延伸出來創造出的效果，使用在CHARCTERS的.characterbox中。</li><br>
@@ -31,7 +35,7 @@
 
 <h1>PROBLEMS I ENCOUNTERED</h1>
 <ol>
-	<li><b>彈跳視窗</b><br>我在子畫面中做完後，進到主頁面中才發現和計畫有巨大落差。因為我無法把這個框框fixed在主畫面的固定點上，一查才知道iframe裡子頁面的fixed是相對於父頁面裡iframe範圍的左上角去設定的（在此為.iframebig的最左上角，而不是#wholepage的左上角）。為了要解決這個問題，我用了一點javascrip，想要藉由監聽父頁面滾軸下滾的距離，傳送到子頁面裡，讓這個框框根據父頁面傳來的這個距離訊息不斷滾動式調整他相對於.iframebig的位置。我卡在這邊卡了6個小時QQ，後來只成功讓console.log跑出，但父頁面的指令一直傳不到子頁面的對應元件中。我在以下附上我嘗試的js程式碼，之後我學會js語法的時候會回來改正的！<p>
+	<li><b>彈跳視窗</b><br>我在子畫面中做完後，進到主頁面中才發現和計畫有巨大落差。因為我無法把這個框框fixed在主畫面的固定點上，一查才知道iframe裡子頁面的fixed是相對於父頁面裡iframe範圍的左上角去設定的（在此為.iframebig的最左上角，而不是#wholepage的左上角）。為了要解決這個問題，我用了一點JavaScript，想要藉由監聽父頁面滾軸下滾的距離，傳送到子頁面裡，讓這個框框根據父頁面傳來的這個距離訊息不斷滾動式調整他相對於.iframebig的位置。我卡在這邊卡了6個小時QQ，後來只成功讓console.log跑出，但父頁面的指令一直傳不到子頁面的對應元件中。我在以下附上我嘗試的js程式碼，之後我學會js語法的時候會回來改正的！<p>
 	<ul class="longword">
 	<li>宣告javascript
 		&lt;script type="text/javascript"src="http://code.jquery.com/jquery-3.3.1.min.js">&lt;/script&gt;
@@ -57,13 +61,13 @@
 
 	</li><br>
 
-	<li><b>效果</b><br></li><br>
+	<li><b>架設IP</b><br>一開始我對網域、IP位址等等真的很不了解，就這樣上網盲找資訊。想說只要能輸入網址跳出網頁就是對的效果XD，結果就找到了githup這個可以設立公開repository的這個網站，努力花了幾個小時了解怎麼設立，後真的把網站push上網的時候真的超級有成就感。雖然今天(5/22)才發現這不是老師說的「架設網頁」嗚嗚，我下週上課完會再架一個IP出來的，不過還是在這裡附上我的github網址: <a class="othera" href="https://alice-aestas.github.io" target="_blank">https://alice-aestas.github.io</a>。</li><br>
 	<li><b>效果</b><br></li><br>
 	<li><b>效果</b><br></li><br>
 
 </ol>
 
-<h1>STRGGLE WHIT TYPESETTING</h1>
+<h1>STRUGGLE WHIT TYPESETTING</h1>
 <ol>
 	<li><b>配色</b><br>最一開始在設計每一個object的時候，我就會希望能把他的所有屬性都調整好，再進入下一個部分，造成最一開始設計出的網頁顏色風格不統一，最後還是全部重新改造了一次，多花了不少時間。</li><br>
 	<li><b>轉場效果</b><br></li><br>

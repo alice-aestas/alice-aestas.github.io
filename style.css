@@ -28,12 +28,14 @@
 	text-align: center;
 }
 .sidebar{
-	color: #4e5242;
-	background-color: #cdd2cc;
+	color: #eee;
+	background-color: #555;
 	font-size: 24px; text-align: left;
 	line-height: 20px;
-
 	.sidebarbox{
+	height:99% ; width:97%; 
+	padding: 5px 1%;
+	scrolling: no;
 	}
 }
 .footer{
@@ -48,7 +50,7 @@
 }
 
 /*********************************版面排版+大小****************/
-@media screen and (max-width:721px){
+@media screen and (max-width:820px){
 	#wholepage{
 		width: 100%; height: px;
 		padding: 0px;
@@ -80,8 +82,7 @@
 		padding: 10px;
 	}
 	.sidebar{
-		height: 20px;
-		padding: 10px;
+		display: none;
 	}
 
 	.footer{
@@ -90,7 +91,7 @@
 	}
 }
 
-@media screen and (min-width:721px){
+@media screen and (min-width:820px){
 	#wholepage{
 		width: 100%; height: px;
 		padding: 0px;
@@ -126,13 +127,11 @@
 		}
 	}
 	.content{
-
 		width: 80%;
 		float: left;
 		padding: 1.25%;
 	}
 	.sidebar{
-
 		width: 15%;
 		padding: 1.25%;
 		float:left;
@@ -145,16 +144,6 @@
 	}
 }
 
-}
-	
-
-
-
-
-/************all the same&不跟版面動的********超連結底線**/
-a{text-decoration:none}
-
-
 /*************header裡的東西***************/
 /*```````````````換華麗一點的字體```````transition 一起設定```````*/
 .titleli{
@@ -166,12 +155,13 @@ a{text-decoration:none}
 	a{
  		color: black;
 		font-weight:bold; 
-		text-transform: uppercase;  ; 
+		text-transform: uppercase;  
+		text-decoration:none;
 	}
 	&:hover a{   
 	color: white; 	}
-	&:active a{   
-	color: yellow; 	}
+	&:focus a{   
+	font-size: 30px; color: green; 	}
 }
 
 .titlealways{
@@ -181,12 +171,6 @@ a{text-decoration:none}
 
 
 /************footer裡的東西*************************/
-.footera:link{color: #a2b9cf}
-.footera:hover{color: #e3e2e2}
-.footera:active{color:#02192f}
-.footera:visited{color:#837e92}
-.footera{text-decoration: underline}
-
 .ftable{
 	padding: 7px;
 	color:#a3aeb2;
@@ -304,11 +288,14 @@ a{text-decoration:none}
 }
 
 
+
+
+
+
+
 /*************************chapters 裏的東西們************/
-.chaptera:link{color: #a2b9cf}
-.chaptera:hover{color: #e3e2e2}
-.chaptera:active{color:#02192f}
-.chaptera:visited{color:#837e92}
+
+
 
 .chapterfloatontop{
 	position: sticky;
@@ -337,7 +324,6 @@ h2{
 	text-indent: 2em;
 	p{
 		margin:3px 3px;
-
 	}
 	.p{
 		margin:25px 3px 5px 3px;
@@ -347,6 +333,11 @@ h2{
 	}
 	.b{
 		font-size: 25px;
+	}
+	.c4paper{
+		width:60%;
+		margin: auto;
+		text-indent: 0;
 	}
 }
 
@@ -368,6 +359,75 @@ h2{
 	}
 
 }
+
+/*************************story 裏的東西們************/
+.storyinside{
+		column-count:2;
+		column-width:200px; 
+		column-gap:30px;
+		column-rule: 5px dotted #eee;
+	h2{
+		column-span:all ;
+	}
+
+
+}
+
+/*************************超連結統一換************/
+	.booka{
+		text-decoration: none;
+		&:link{color: #a2b9cf;}
+		&:hover{color: #e3e2e2;}
+		&:active{color:#02192f;}
+		&:visited{color:#837e92;}
+	}
+
+	.othera{
+		text-decoration: none;
+		&:link{color: #a2b9cf;}
+		&:hover{color: #e3e2e2;}
+		&:active{color:#02192f;}
+		&:visited{color:#837e92;}
+	}
+
+	.chaptera{
+		text-decoration: none;
+		&:link{color: #a2b9cf;}
+		&:hover{color: #e3e2e2;}
+		&:active{color:#02192f;}
+		&:visited{color:#837e92;}
+	}
+	.footera{
+		text-decoration: underline;
+		&:link{color: #a2b9cf;}
+		&:hover{color: #e3e2e2;}
+		&:active{color:#02192f;}
+		&:visited{color:#837e92;}
+	}
+	
+
+
+
+
+/*************************字體統一換************/
+
+/*****chapter***/
+
+p/*故事內容*/{
+
+}
+
+.alice/*故事內容的信件們1.c4報紙*/{
+
+}
+
+
+
+
+
+
+
+
 
 
 
