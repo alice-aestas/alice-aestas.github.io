@@ -44,7 +44,7 @@
 }
 
 .iframebig{
-	height:99% ; width:97%; 
+	height:800px ; width:97%; 
 	padding: 5px 1%;
 	scrolling: no;
 }
@@ -57,7 +57,7 @@
 		margin: 0px auto; 
 	}
 	.top{
-		height: 200px;
+		height: 150px;
 	}
 	.header{
 		height:43px;
@@ -78,7 +78,6 @@
 		}
 	}
 	.content{
-
 		padding: 10px;
 	}
 	.sidebar{
@@ -89,6 +88,20 @@
 		height: 60px;
 		padding: 14px 10px 6px 10px;
 	}
+	
+	div [class ^="characintroboxcontnt"] {
+		padding: 0 10px 0 0px;
+		top: 80px;
+		li{		font-size: 11px;	}
+	}
+	.storyinside{
+		h4{		font-size: 16px;	}
+	}
+	.iframehome{
+		height: 340px;
+		width: 420px;
+	}
+
 }
 
 @media screen and (min-width:820px){
@@ -132,9 +145,12 @@
 		padding: 1.25%;
 	}
 	.sidebar{
-		width: 15%;
+		width: 15%; height: 815.9px;
 		padding: 1.25%;
 		float:left;
+	}
+	.phonesidbar{
+		display:none;
 	}
 
 	.footer{
@@ -142,6 +158,20 @@
 		padding: 14px 10px 6px 10px;
 		clear: both;
 	}
+
+	div [class ^="characintroboxcontnt"] {
+		padding: 0 30px 0 5px;
+		top: 100px;
+		li{		font-size: 14px;}
+	}
+	.storyinside{
+		h4{		font-size: 20px;	}
+	}
+	.iframehome{
+		height: 550px;
+		width: 700px;
+	}
+
 }
 
 /*************header裡的東西***************/
@@ -159,9 +189,12 @@
 		text-decoration:none;
 	}
 	&:hover a{   
-	color: white; 	}
-	&:focus a{   
-	font-size: 30px; color: green; 	}
+		color: white; 
+	}
+	a:focus{
+		color: green; 
+	}
+
 }
 
 .titlealways{
@@ -185,7 +218,7 @@
 /************CHARACTERS中的設定**********/
 
 .characbox{
-	height:150px; width:135px;
+	height:150px; width:90%;
 	float: left;
 	border;
 	margin:1%;
@@ -218,24 +251,55 @@
 }
 
 
+.characintrobox{  
+		position: fixed;
+ 		top: 0;
+ 		bottom: 0;
+  		left: 0;
+ 	 	right: 0;
+  		background: rgba(0,0,0,0.8);
+  		transition: opacity 200ms;
+  		visibility: hidden;
+  		opacity: 0;
 
-.characintrobox {
-	display: none;
-	clear: both;
-	border: solid 5px gray;
-	background-color: white;
-	margin: 0 auto 20px auto;
-	width:95%; 
-	font-size: 14px; color: #353f3f;	
-	transition: opacity 1s;
-	&:target{
-		display: inline-block;
-		.characbox{
-			background-color: white;
+		.cancel {
+	    		position: fixed;
+	    		width: 100%;
+    			height: 100%;
+    			cursor: default;
 		}
-	}
+ 		&:target {
+    			visibility: visible;
+    			opacity: 1;
+		}
+
+/*		.characintroboxcontnta{ 		top:100px;	}
+		.characintroboxcontntb{ 		top:100px;	}
+		.characintroboxcontntc{ 		top:100px;	}
+		.characintroboxcontntd{ 		top:100px;	}
+		.characintroboxcontnte{ 		top:100px;	}
+		.characintroboxcontntf{ 		top:100px;	}
+		.characintroboxcontntg{ 		top:100px;	}
+		.characintroboxcontnth{ 		top:200px;	}
+		.characintroboxcontnti{ 		top:200px;	}
+		.characintroboxcontntj{ 		top:200px;	}
+		.characintroboxcontntk{ 		top:200px;	}
+		.characintroboxcontntl{ 		top:200px;	}	*/
 }
 
+div [class ^="characintroboxcontnt"] {
+    	position: relative;
+	margin: auto;
+	width: 90%;
+	background: #b4b5b3;
+	border: solid 3px #949593;
+	border-radius: 5px;
+	color:#444543;
+	h3{
+		text-indent: 1em;
+	}
+
+}
 
 /************DISCUSSION*******************/
 
@@ -361,19 +425,56 @@ h2{
 }
 
 /*************************story 裏的東西們************/
+.bookone {
+	margin: 50px auto 30px auto;
+	font-size: 30px;
+	}
+
 .storyinside{
 		column-count:2;
-		column-width:200px; 
+		column-width:150px; 
 		column-gap:30px;
-		column-rule: 5px dotted #eee;
-	h2{
-		column-span:all ;
+		column-rule: 5px dotted #666;
+
+	h4{
+		margin: 10px 1% 0 7%;	
+
+	}
+	p{
+		break-before:column;
+		visibility: hidden;
+		line-height: 0.1px;
+
 	}
 
 
 }
 
-/*************************超連結統一換************/
+/************************HOME************/
+
+.iframehome{
+	border: none;
+}
+
+.homeinside{
+	text-align: center;
+}
+
+.phonesidbar{
+	margin: 20px 10px;
+	padding: 10px 30px;
+	border: solid white 3px;
+	border-radius: 6%;
+	background-color: gray;
+	opacity: 0;
+	&:hover{
+		opacity: 0.8;
+	}
+	
+}
+
+
+/************************超連結統一換************/
 	.booka{
 		text-decoration: none;
 		&:link{color: #a2b9cf;}
@@ -422,7 +523,9 @@ p/*故事內容*/{
 }
 
 
+.momreadingbook /*c2中Aestas在做夢中他媽念的故事書內容*/{
 
+}
 
 
 

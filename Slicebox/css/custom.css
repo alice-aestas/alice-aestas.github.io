@@ -1,15 +1,15 @@
 .shadow {
 	width: 100%;
-	
-height: 168px;
+opacity: 0.5;
+height: 90px;
 	
 position: relative;
-	
-margin-top: -110px;
+
+margin: -40px auto 0 auto;
 	
 background: transparent url(../images/shadow.png) no-repeat bottom center;
 	background-size: 100% 100%; /* stretches it */
-	z-index: -1;
+	z-index: 0;
 	
 display: none;
 }
@@ -43,7 +43,7 @@ width: 42px;
 	
 height: 42px;
 	
-background: #FCCAC3 
+background: #798883
 
 url(../images/nav.png) no-repeat top left;
 	
@@ -104,7 +104,7 @@ width: 16px;
 	height: 16px;
 	border-radius: 50%;
 	margin: 3px;
-	background: #FCCAC3;
+	background: #798883;
 	cursor: pointer;
 	box-shadow: 0 1px 1px rgba(255,255,255,0.6), 
 		
@@ -115,7 +115,7 @@ inset 0 1px 1px rgba(0,0,0,0.1);
 .nav-dots span.nav-dot-current {
 	box-shadow: 0 1px 1px rgba(255,255,255,0.6), 
 	inset 0 1px 1px rgba(0,0,0,0.1), 
-inset 0 0 0 3px #FCCAC3,
+inset 0 0 0 3px #798883
 	inset 0 0 0 8px #fff;
 }
 
@@ -133,7 +133,7 @@ inset 0 0 0 3px #FCCAC3,
 .nav-options span {
 	width: 30px;
 	height: 30px;
-	background: #FCCAC3 url(../images/options.png) no-repeat top left;
+	background: #798883 url(../images/options.png) no-repeat top left;
 	text-indent: -9000px;
 	cursor: pointer;
 	opacity: 0.7;

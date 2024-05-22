@@ -4,13 +4,7 @@
 	<meta charset= "utf-8">
 	<title>DISCUSSION.html</title>
 	<link href="style.css" rel="stylesheet" type="text/css">
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script>
-    $(function(){
-        var _h = $(document).height();//取得網頁高度
-        parent.postMessage({ h: _h}, '*');//將高度值，傳到父層
-    });    	console.log('xxx');
-</script>
+
 </head>
 
 <body>
@@ -27,9 +21,34 @@
 				<h3>彈跳視窗示範</h3>
 				<p>點框框外面可以跳離視窗</p>
 	</div></div></li><br>
-	<li><b>轉場效果</b><br>我在查一其他事情的時候偶然間學到transition這個指令，他讓整個畫面看起來更有完整性，超級喜歡!!</li><br>
+	<li><b>轉場效果</b><br>我在查一其他事情的時候偶然間學到transition這個指令，他讓整個畫面看起來更有完整性，超級喜歡!!  嘿嘿結果後來課上老師也有教到，就更了解了!! </li><br>
 	<li><b>Target</b><br>我把它用來讓物件從隱藏到顯現。是我學彈跳視窗後延伸出來創造出的效果，使用在CHARCTERS的.characterbox中。</li><br>
-	<li><b>轉場效果</b><br></li><br>
+	<li><b>iframe跟著分頁長度做更動</b><br>最一開始，就有個想要試試看讓iframe隨著每個頁面不一樣調整大小，所以就去研究應該怎麼做，查到實行後發現自己還是比較喜歡大視窗不要滑那麼多，滑小視窗就好的感覺，所以最終還是把這個功能刪掉了，但學到這個功能還是覺得很酷!! 我做的方式是去偵測iframe內嵌式窗的大小，把這個高度回傳給父視窗的#ifamebig和#sidbar，讓這兩個元素隨著內嵌式窗大小作更動。</li>
+		<br><ul>
+		<li>在父頁面中：<br>
+	&lt;script src="https://code.jquery.com/jquery-2.2.4.min.js"&gt;&lt;/script&gt;<br>
+&lt;script&gt;<br>
+	$(function(){<br>
+   	 function receiveMessageFromIframePage (event) {<br>
+      	  var height = ('receiveMessageFromIframePage',event.data.h);<br>
+      	  console.log(height);//接收source.html頁面所回傳的高度值<br>
+       		 $('#iframebig').height(height);//將取得的高度，變更myIframe高度<br>
+		$('#sidebarbox').height(height);<br>
+    }<br>
+    window.addEventListener("message", receiveMessageFromIframePage, false);//監聽<br>receiveMessageFromIframePage
+});<br>
+&lt;/script&gt;<br>
+		</li>
+		<li>在每個內嵌頁面中：<br>
+&lt;script src="https://code.jquery.com/jquery-2.2.4.min.js"&gt;&lt;/script&gt;<br>
+&lt;script&gt;<br>
+    $(function(){<br>
+        var _h = $(document).height();//取得網頁高度<br>
+        parent.postMessage({ h: _h}, '*');//將高度值，傳到父層<br>
+    });    	console.log('xxx');<br>
+&lt;/script&gt;
+		</li></ul>
+	<br>
 	<li><b>轉場效果</b><br></li><br>
 </ol>
 
@@ -61,7 +80,14 @@
 
 	</li><br>
 
-	<li><b>架設IP</b><br>一開始我對網域、IP位址等等真的很不了解，就這樣上網盲找資訊。想說只要能輸入網址跳出網頁就是對的效果XD，結果就找到了githup這個可以設立公開repository的這個網站，努力花了幾個小時了解怎麼設立，後真的把網站push上網的時候真的超級有成就感。雖然今天(5/22)才發現這不是老師說的「架設網頁」嗚嗚，我下週上課完會再架一個IP出來的，不過還是在這裡附上我的github網址: <a class="othera" href="https://alice-aestas.github.io" target="_blank">https://alice-aestas.github.io</a>。</li><br>
+	<li><b>架設IP</b><br>一開始我對網域、IP位址等等真的很不了解，就這樣上網盲找資訊。想說只要能輸入網址跳出網頁就是對的效果XD，結果就找到了githup這個可以設立公開repository的這個網站，努力花了幾個小時了解怎麼設立，後真的把網站push上網的時候真的超級有成就感。雖然今天(5/22)才發現這不是老師說的「架設網頁」嗚嗚，我下週上課完會再架一個IP出來的，不過還是在這裡附上我的github網址: <a class="othera" href="https://alice-aestas.github.io" target="_blank">https://alice-aestas.github.io</a>，以下是我參考的使用教學和幾個push網頁常用指令。
+	<ul>	
+		<li>教學1: <a href="https://www.youtube.com/watch?v=Zd5jSDRjWfA" target="_blank">【git教學 #1】15分鐘學會git & github（附實例）</a></li>
+		<li>教學2: <a href="https://www.youtube.com/watch?v=py3n6gF5Y00" target="_blank">github基本教學 - 從無到有</a></li>
+		<li>一些常用指令：git add .；git commit -m "註釋"；git push -u origin master(網域名稱)；git status
+	</ul>
+	</li><br>
+
 	<li><b>效果</b><br></li><br>
 	<li><b>效果</b><br></li><br>
 

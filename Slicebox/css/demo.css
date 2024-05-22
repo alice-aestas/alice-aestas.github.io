@@ -26,7 +26,7 @@ body {
 	font-weight: 400;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
-    min-width: 320px;
+
 }
 
 a {
@@ -55,10 +55,11 @@ h1 span, h5 {
 
 .wrapper {
 	position: relative;
-	max-width: 840px;
+
 	width: 100%;
-	padding: 0 50px;
+	padding: 15px 50px;
 	margin: 0 auto;
+	background-color: #d8dbe1;
 }
 
 /* Header Style */
@@ -159,6 +160,6 @@ p.info {
 	clear: both;
 	text-align: center;
 	width: 100%;
-	max-wdith: 440px;
+
 	margin: 0 auto;
 }
