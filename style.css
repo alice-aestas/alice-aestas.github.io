@@ -17,8 +17,9 @@
 	position: sticky;
 	top:0;
 	color: white;
-	background : linear-gradient(180deg, #515c5e , #555458);
+	background-color: #444;
 	box-shadow:0 4px 5px 1px gray;
+	z-index: 1000;
 }
 .content{
 	color: #4e5242;
@@ -29,15 +30,94 @@
 }
 .sidebar{
 	color: #eee;
-	background-color: #555;
+	background : linear-gradient(180deg, #3e4145, #5a5a5a 60%, #999);
 	font-size: 24px; text-align: left;
 	line-height: 20px;
-	.sidebarbox{
-	height:99% ; width:97%; 
-	padding: 5px 1%;
-	scrolling: no;
+	height:99% ; width100%;
+	padding:100px; 
+
+ 	.sidebarbox{
+
+	}
+
+	.sideanimationphotoa{		position: absolute;		left:0;	opacity:0;	top:200px;	animation: a 30s ease-in-out 0s infinite normal none running;}
+	.sideanimationphotob{		position: absolute;		left:0;	opacity:0;	top:200px;	animation: b 30s ease-in-out 8s infinite normal none running;}
+	.sideanimationphotoc{		position: absolute;		left:0;	opacity:0;	top:200px;	animation: c 30s ease-in-out 15s infinite normal none running;}
+	.sideanimationphotod{		position: absolute;		left:0;	opacity:0;	top:200px;	animation: d 30s ease-in-out 25s infinite normal none running;}
+
+	.sideanimationphotoa1{		position: absolute;		left:0;	opacity:0;	top:200px;	animation: a 22s ease-in-out 5s infinite normal none running;}
+	.sideanimationphotob1{		position: absolute;		left:0;	opacity:0;	top:200px;	animation: b 24s ease-in-out 10s infinite normal none running;}
+	.sideanimationphotoc1{		position: absolute;		left:0;	opacity:0;	top:200px;	animation: c 27s ease-in-out 20s infinite normal none running;}
+	.sideanimationphotod1{		position: absolute;		left:0;	opacity:0;	top:200px;	animation: d 25s ease-in-out 28s infinite normal none running;}
+
+	.sideanimationballa{		position: absolute;		opacity:0;	top:200px;	animation: d 27s ease-in-out 2s infinite normal none running;}
+	.sideanimationballb{		position: absolute;		opacity:0;	top:200px;	animation: e 25s ease-in-out 3s infinite normal none running;}
+	.sideanimationballc{		position: absolute;		opacity:0;	top:200px;	animation: a 23s ease-in-out 6s infinite normal none running;}
+	.sideanimationballd{		position: absolute;		opacity:0;	top:200px;	animation: b 29s ease-in-out 8s infinite normal none running;}
+	.sideanimationballe{		position: absolute;		opacity:0;	top:200px;	animation: d 25s ease-in-out 9s infinite normal none running;}
+	.sideanimationballf{		position: absolute;		opacity:0;	top:200px;	animation: e 23s ease-in-out 11s infinite normal none running;}
+	.sideanimationballg{		position: absolute;		opacity:0;	top:200px;	animation: a 29s ease-in-out 13s infinite normal none running;}
+	.sideanimationballh{		position: absolute;		opacity:0;	top:200px;	animation: e 30s ease-in-out 15s infinite normal none running;}
+	.sideanimationballi{		position: absolute;		opacity:0;	top:200px;	animation: d 27s ease-in-out 18s infinite normal none running;}
+	.sideanimationballj{		position: absolute;		opacity:0;	top:200px;	animation: c 25s ease-in-out 19s infinite normal none running;}
+	.sideanimationballk{		position: absolute;		opacity:0;	top:200px;	animation: e 23s ease-in-out 21s infinite normal none running;}
+	.sideanimationballl{		position: absolute;		opacity:0;	top:200px;	animation: b 29s ease-in-out 22s infinite normal none running;}
+	.sideanimationballm{		position: absolute;		opacity:0;	top:200px;	animation: c 25s ease-in-out 25s infinite normal none running;}
+	.sideanimationballn{		position: absolute;		opacity:0;	top:200px;	animation: e 23s ease-in-out 27s infinite normal none running;}
+	.sideanimationballo{		position: absolute;		opacity:0;	top:200px;	animation: a 29s ease-in-out 28s infinite normal none running;}
+	.sideanimationballp{		position: absolute;		opacity:0;	top:200px;	animation: d 30s ease-in-out 30s infinite normal none running;}
+
+	.sideanimationball{
+		background-color: #ccc;
+		border-radius: 50%;
+		width:4px;
+		height: 4.3px;
+	}
+
+	.sidebottomphoto{
+		margin: auto;
+		width: 15%;
+		object-fit: contain;
+		position: absolute;
+		top: 880px; left:82.5%; right:0;
 	}
 }
+
+
+@keyframes a{
+    0% { top:200px; left:84%; width:80px; opacity:0;}
+    30% { left: 90%; width:65px; rotate: 60deg; opacity:1;}
+    40% {	left: 88%;}
+    100% { top: 1100px; left: 90%;  width:0; rotate:-300deg}
+}
+@keyframes b{
+    0% { top:200px; left:87%; width:80px; opacity:0;}
+    20% { left: 84%; width:65px; rotate: -40deg; opacity:1;}
+    40% {	left: 88%;}
+    100% { top: 1100px; left: 90%;  width:0; rotate: 300deg}
+}
+
+@keyframes c{
+    0% { top:200px; left:90%; width:60px; opacity:0;}
+    10% { left: 93%; width:65px; opacity:1;}
+    50% {	left: 94%;}
+    100% { top: 1100px; left: 90%;  width:0; rotate: 500deg}
+}
+@keyframes d{
+    0% { top:200px; left:94%; width:70px; opacity:0;}
+    40% { left: 85%; width:65px; opacity:1;}
+    50% {	left: 89%;}
+    100% { top: 1100px; left: 83%;  width:0; rotate: -400deg}
+}
+@keyframes e{
+    0% { top:200px; left:94%; width:70px; opacity:0;}
+    40% { left: 92%; width:65px; opacity:1;}
+    50% {	left: 89%;}
+    100% { top: 1100px; left: 94%;  width:0; rotate: -400deg}
+}
+
+
+
 .footer{
 	background-color: #545c5e;
 	font-size: 10px; text-align: center;
@@ -272,6 +352,7 @@
     			visibility: visible;
     			opacity: 1;
 		}
+}
 
 /*		.characintroboxcontnta{ 		top:100px;	}
 		.characintroboxcontntb{ 		top:100px;	}
@@ -285,7 +366,6 @@
 		.characintroboxcontntj{ 		top:200px;	}
 		.characintroboxcontntk{ 		top:200px;	}
 		.characintroboxcontntl{ 		top:200px;	}	*/
-}
 
 div [class ^="characintroboxcontnt"] {
     	position: relative;
@@ -461,7 +541,7 @@ h2{
 }
 
 .phonesidbar{
-	margin: 20px 10px;
+	margin: 20px 10px; 
 	padding: 10px 30px;
 	border: solid white 3px;
 	border-radius: 6%;
@@ -470,7 +550,71 @@ h2{
 	&:hover{
 		opacity: 0.8;
 	}
-	
+}
+
+/************************GADGETS************/
+.gadgetsinside{
+	text-align: center;
+}
+
+.gadgetss{
+	column-count: 3;
+	column-width: 160px;
+	.gadgetsbox{break-inside: avoid;}
+}
+
+.gadgetsbox{
+	padding: 7px;
+	width: 95%; 
+	vertical-align: middle;
+	text-align: center;
+	margin: 0 auto 20px; auto;
+	border-radius: 5%;
+	transition: background 0.4s linear;
+	.gadgetswhat{
+		text-align: center;
+	}
+	.gadgetsphoto {
+		z-index: 10;
+		height:90px; 
+		margin: 15px auto 2px auto;
+	}	
+	.gadgetsphotoa {
+		z-index: 10;
+		height:90px; 
+		margin: 0 auto 2px auto;
+	}	
+	.gadgetsname{
+		margin: 5px;
+	}
+	.gadgetsintrobox{ 
+		display: none;
+	}
+	&:hover{
+		cursor : crosshair;
+		background-color: #ececef;
+		.gadgetsphoto{
+			display: none;
+		}
+		.gadgetsname{
+			font-size: 17px;
+			margin: 15px;
+		}
+		.gadgetsintrobox{ 
+			width: 70%;
+			margin: 0 auto;
+			display: block;
+    			opacity: 1;
+			font-size: 13px;
+			color: #7a7b7d;
+			li{
+				text-align: left;
+				text-indent: 5px;
+				list-style-type: armenian;
+			}
+		}
+
+
 }
 
 
@@ -530,7 +674,9 @@ p/*故事內容*/{
 
 
 
-
+@keyframes movetest{
+from {top: 0px}
+to {top: 500px}
 
 
 
