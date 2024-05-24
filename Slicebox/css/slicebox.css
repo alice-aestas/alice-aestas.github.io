@@ -4,6 +4,7 @@
 	position: relative;
 	overflow: hidden;
 	width: 100%;
+	border-radius: 10px;
 	list-style-type: none;
 	padding: 0;
 }
@@ -28,6 +29,7 @@
 }
 
 .sb-description {
+	font-family:"Protest Revolution";	letter-spacing: 3px;
 	padding: 10px;
 	bottom: 20px;
 	left: 15px;
@@ -35,18 +37,19 @@
 	z-index: 1000;
 	position: absolute;
 	background: #363735;
-	background: rgba(124,158,160, 0.4);
+	background: rgba(124,158,160, 0.9);
 	border-left: 4px solid rgba(255,255,255,0.7);
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	filter: alpha(opacity=0);	
 	opacity: 0;
 	color: #fff;
+	
 
-	-webkit-transition: all 200ms;
-	-moz-transition: all 200ms;
-	-o-transition: all 200ms;
-	-ms-transition: all 200ms;
-	transition: all 200ms;
+	-webkit-transition: all 500ms;
+	-moz-transition: all 500ms;
+	-o-transition: all 500ms;
+	-ms-transition: all 500ms;
+	transition: all 500ms;
 }
 
 .sb-slider li.sb-current .sb-description {

@@ -36,21 +36,29 @@ text-shadow: 0 1px 1px rgba(255,255,255,0.5);
 	display: none;
 }
 
+@media screen and (min-width:500px){	
+	.nav-arrows a {
+		outline: rgba(50, 50, 40, 0.5) solid 10px; 
+		margin: 10px;
+	}
+}
+@media screen and (max-width:500px){	
+	.nav-arrows a {
+		box-shadow: 0 1px 1px rgba(255,255,255,0.6);
+	}
+}
 
 .nav-arrows a {
-	
-width: 42px;
-	
-height: 42px;
-	
-background: #798883
+width: 42px; height: 42px;
+
+background: rgba(50, 50, 40, 0.5)
 
 url(../images/nav.png) no-repeat top left;
 	
 position: absolute;
 	
-top: 50%;
-	left: 2px;
+top: 45%;
+left: 2px;
 	
 text-indent: -9000px;
 	
@@ -58,11 +66,10 @@ cursor: pointer;
 	
 margin-top: -21px;
 	
-opacity: 0.9;
-	
 border-radius: 50%;
-	
-box-shadow: 0 1px 1px rgba(255,255,255,0.8);
+opacity: 0.6;
+transition: all 0.2s;
+
 }
 
 
@@ -104,7 +111,7 @@ width: 16px;
 	height: 16px;
 	border-radius: 50%;
 	margin: 3px;
-	background: #798883;
+	background: rgba(50, 50, 40, 0.5);
 	cursor: pointer;
 	box-shadow: 0 1px 1px rgba(255,255,255,0.6), 
 		
@@ -133,12 +140,13 @@ inset 0 0 0 3px #798883
 .nav-options span {
 	width: 30px;
 	height: 30px;
-	background: #798883 url(../images/options.png) no-repeat top left;
+	background: rgba(53, 57, 40, 0.5) url(../images/options.png) no-repeat top left;
 	text-indent: -9000px;
 	cursor: pointer;
 	opacity: 0.7;
 	display: inline-block;
 	border-radius: 50%;
+	transition: all 0.2s;
 }
 
 .nav-options span:first-child{
