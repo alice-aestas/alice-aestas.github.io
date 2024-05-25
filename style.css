@@ -264,15 +264,15 @@
 		transition: all 0.5s;
 		position: relative;
 		margin: 10px auto;
-		padding: 5px 10px;
+		padding: 15px 20px;
 		width: 80%; 
 		text-align: justify;
 		background-color: rgba(30,30,30,0.7);
 		border-radius: 5%;
 		opacity: 0;
 		z-index: 500;
-		h3{		font-size: 15px; font-family: "Shadows Into Light"}
-		p{		font-size: 12px; font-family:"Shadows Into Light","Noto Serif TC";}
+		h3{	margin:5px 0;	font-size: 17px; 	font-family: "Shadows Into Light"; }
+		p{	margin:5px 0;	font-size: 17px; 	font-family: 草書, "Shadows Into Light","Noto Serif TC";}
 
 		&:hover{
 		cursor: crosshair;
@@ -540,7 +540,8 @@ div [class ^="characintroboxcontnt"] {
 	}
 	li{
 		text-align: left;
-		font-family:"Libre Bodoni","Noto Serif TC";	color: ;		
+		font-size: 17px;
+		font-family:"Libre Bodoni", "Noto Serif TC";
 		text-indent:  ;
 	}
 	b{		color: ;		
@@ -778,8 +779,8 @@ h2{
 }
 
 .phonesidbar{
-	font-family:"Shadows Into Light","";
 	margin: 30px 40px; 
+	font-family:"Shadows Into Light",草書;
 	padding: 10px 25px;
 	border-radius: 20px;
 	background-color: rgba(161, 158, 140, 0.4);
@@ -787,6 +788,12 @@ h2{
 	opacity: 0;
 	transition: all 1s;
 	box-shadow: 1px 1px 7px #777;
+	h3{
+		margin: 5px 0;
+	}
+	p{
+		margin: 5px 0;
+	}
 	&:hover{
 		opacity: 0.9;
 	}
