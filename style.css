@@ -70,6 +70,14 @@
 	}
 	.hometitle{	h2	{	font-size: 19px;}}
 	.hometitle:hover{		h2{		font-size: 22px;	margin: 5px;}}
+	.characbox{
+		a{	
+			font-size: 22px; 
+		}
+		&:hover{
+			a{font-size: 24px; 	}
+		}
+	}
 
 }
 
@@ -155,7 +163,12 @@
 	}
 	.hometitle{	h2	{	font-size: 29px;}}
 	.hometitle:hover{		h2{		font-size: 32px;		margin: 20px;}}
-
+	.characbox{
+		a{	font-size: 25px; 	}
+		&:hover{
+			a{font-size: 27px; 	}
+		}
+	}
 }
 
 
@@ -419,7 +432,6 @@
 	transition: all 0.4s;
 	a{
 		color: #2f2a2f; 
-		font-size: 25px; 
 		font-weight:bold;
 		transition: all 0.7s;
 		font-style: italic;
@@ -428,7 +440,6 @@
 		background-color: #bab9b3;
 		a{
 		color: black;
-		font-size: 27px;
 		}
 		.characphoto{
 			border-width: 0.5px 8px 0.5px 8px ;;
@@ -533,6 +544,7 @@ div [class ^="characintroboxcontnt"] {
 
 .disscutioninside{
 	text-align: center;
+	margin: 3px 14px 3px 3px;
 	h1{
 	font-family:"Protest Guerrilla";
 	font-size: 50px;
@@ -571,7 +583,6 @@ div [class ^="characintroboxcontnt"] {
     			position: relative;
 			top:100px;
 			margin: auto;
-			height:100px;
 			width: 240px;
 			background: #b4b5b3;
 			border: solid 3px #949593;
