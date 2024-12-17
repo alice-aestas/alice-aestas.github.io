@@ -3,12 +3,18 @@
 
 @charset"UTF-8";
 
+.displaynone{
+	display: none;
+}
 
+.none{
+	visibility: hidden;
+}
 
 /*********************************版面排版+大小****************/
 @media screen and (max-width:820px){
 	#wholepage{
-		width: 100%; height: px;
+		width: 100%; 
 		padding: 0px;
 		margin: 0px auto; 
 	}
@@ -66,7 +72,7 @@
 		margin: 36px 0 0 20%;
 		font-size: 70px;
 		text-indent: -60px;
-		text-shadow: -5px -3px 2px rgba(210, 210, 225, 1);
+		
 	}
 	.hometitle{	h2	{	font-size: 19px;}}
 	.hometitle:hover{		h2{		font-size: 22px;	margin: 5px;}}
@@ -78,12 +84,19 @@
 			a{font-size: 24px; 	}
 		}
 	}
+	.yearsofphoto{
+		height: 100px;
+		p{
+			font-size: 50px;
+	
+		}
+	}
 
 }
 
 @media screen and (min-width:820px){
 	#wholepage{
-		width: 100%; height: px;
+		width: 100%; 
 		padding: 0px;
 		margin: 0px auto; 
 	}
@@ -159,22 +172,36 @@
 		letter-spacing: ;
 		font-size: 170px;
 		text-indent: -100px;
-		text-shadow: -8px -3px 3px rgba(210, 210, 225, 1);
+		
 	}
 	.hometitle{	h2	{	font-size: 29px;}}
-	.hometitle:hover{		h2{		font-size: 32px;		margin: 20px;}}
-	.characbox{
-		a{	font-size: 25px; 	}
-		&:hover{
-			a{font-size: 27px; 	}
+	.hometitle:hover{		
+		h2{		
+			font-size: 32px;		
+			margin: 20px;
 		}
 	}
+	.characbox{
+		a{	
+			font-size: 25px; 	
+		}
+		&:hover{
+			a{
+				font-size: 27px; 	
+			}
+		}
+	}
+	.yearsofphoto{
+		height: 150px;
+		font-size: 80px;
+	}
 }
-
+ 
 
 
 /*********************************top****************/
 .top{
+	
 	background-image: url(image/tree.png); background-repeat : no-repeat ;background-position: right;  background-size: contain;
 	text-align: left;
 	.topsky{
@@ -187,13 +214,18 @@
 		position: absolute;
 		top:0; left: 0;		
 		color: #444;
+		text-shadow: -5px -3px 2px rgba(210, 210, 225, 1);
+		transition: text-shadow 2s;
+		&:hover{
+			text-shadow: -5px -3px 2px rgb(222, 222, 205);
+		}
 
 	}
 }
 
 /*************header裡的東西*********************/
 .header{
-	font-family: "Platypi"; font-weight: ;
+	font-family: "Platypi"; 
 	position: sticky;
 	top:0;
 	color: white;
@@ -235,10 +267,13 @@
 			}
 		}
 	}
+
+
 	.seasonlogo{
 		margin: 4px 0;
 		width: 90%;
 		height: 45px;
+		cursor: pointer;
 	}
 	.titlealways{
 		text-align: center;
@@ -259,7 +294,7 @@
 .iframebig{
 	height:800px ; width:97%; 
 	padding: 5px 1%;
-	scrolling: no;
+	
 }
 
 
@@ -285,15 +320,21 @@
 		opacity: 0;
 		z-index: 500;
 		h3{	margin:5px 0;	font-size: 17px; 	font-family: "Shadows Into Light"; }
-		p{	margin:5px 0;	font-size: 17px; 	font-family: 草書, "Shadows Into Light","Noto Serif TC";}
-
+		p{	
+			margin:5px 0;	
+			font-size: 12px; 	
+			font-family: 草書, "Shadows Into Light","Noto Serif TC";}
+		.right{
+			text-align: right;
+			font-family: "Shadows Into Light"; 
+		}
 		&:hover{
 		cursor: crosshair;
 		opacity: 1;
 	
 		}
 	}
-
+	
 	.sideanimationphotoa{		position: absolute;		left:0;	opacity:0;	top:200px;	animation: a 30s ease-in-out 0s infinite normal none running;}
 	.sideanimationphotob{		position: absolute;		left:0;	opacity:0;	top:200px;	animation: b 30s ease-in-out 8s infinite normal none running;}
 	.sideanimationphotoc{		position: absolute;		left:0;	opacity:0;	top:200px;	animation: c 30s ease-in-out 15s infinite normal none running;}
@@ -332,13 +373,11 @@
 		margin: auto;
 		width: 15%;
 		object-fit: contain;
-		position: absolute;
+		
 
 	}
-	#winterbottom{		top: 1170px; left:82.5%; right:0;}
-
+	#winterbottom{	position: absolute;	top: 1170px; left:82.5%; right:0;}
 }
-
 
 @keyframes a{
     0% { top:200px; left:84%; width:80px; opacity:0;}
@@ -374,6 +413,323 @@
 
 
 
+
+.authorwinter{
+	img[class^="authoranimationphoto"] {
+		position: absolute;	
+		left:0;	
+		opacity:0;	
+		top:200px;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-play-state: running;
+	}
+
+	img[class^="authoranimationphotoa"]{
+		animation-name: aa;
+	}
+	.authoranimationphotoa{
+			animation-duration: 60s;
+			animation-delay: 0s;
+		}
+		.authoranimationphotoa1{
+			animation-duration: 60s;
+			animation-delay: 4s;
+		}
+		.authoranimationphotoa2{
+			animation-duration: 60s;
+			animation-delay: 15s;
+		}
+		.authoranimationphotoa3{
+			animation-duration: 60s;
+			animation-delay: 24s;
+		}	
+		.authoranimationphotoa4{
+			animation-duration: 60s;
+			animation-delay: 36s;
+		}	
+		.authoranimationphotoa5{
+			animation-duration: 60s;
+			animation-delay: 44s;
+		}	
+		.authoranimationphotoa6{
+			animation-duration: 62s;
+			animation-delay: 43s;
+		}
+		.authoranimationphotoa7{
+			animation-duration: 62s;
+			animation-delay: 52s;
+		}
+	img[class^="authoranimationphotob"]{
+		animation-name: ab;
+	}
+	.authoranimationphotoa{
+			animation-duration: 70s;
+			animation-delay: 6s;
+		}
+		.authoranimationphotob1{
+			animation-duration: 60s;				animation-delay: 0s;
+		}
+		.authoranimationphotob2{
+			animation-duration: 68s;
+			animation-delay: 16s;
+		}
+		.authoranimationphotob3{
+			animation-duration: 62s;
+			animation-delay: 19s;
+		}
+		.authoranimationphotob4{
+			animation-duration: 68s;
+			animation-delay: 26s;
+		}
+		.authoranimationphotob5{
+			animation-duration: 62s;
+			animation-delay: 31s;
+		}
+		.authoranimationphotob6{
+			animation-duration: 62s;
+			animation-delay: 43s;
+		}
+		.authoranimationphotob7{
+			animation-duration: 62s;
+			animation-delay: 52s;
+		}
+	img[class^="authoranimationphotoc"]{
+		animation-name: ac;
+	}
+	.authoranimationphotoc{
+			animation-duration: 64s;
+			animation-delay: 0s;
+		}
+		.authoranimationphotoc1{
+			animation-duration: 69s;
+			animation-delay: 8s;
+		}
+		.authoranimationphotoc2{
+			animation-duration: 59s;
+			animation-delay: 19s;
+		}
+		.authoranimationphotoc3{
+			animation-duration: 62s;
+			animation-delay: 28s;
+		}
+		.authoranimationphotoc4{
+			animation-duration: 60s;
+			animation-delay: 30s;
+		}	
+		.authoranimationphotoc5{
+			animation-duration: 60s;
+			animation-delay: 37s;
+		}	
+		.authoranimationphotoc6{
+			animation-duration: 62s;
+			animation-delay: 40s;
+		}
+		.authoranimationphotoc7{
+			animation-duration: 62s;
+			animation-delay: 55s;
+		}
+	img[class^="authoranimationphotod"]{
+		animation-name: ad;
+	}
+	.authoranimationphotod{
+			animation-duration: 62s;
+			animation-delay: 3s;
+		}
+		.authoranimationphotod1{
+			animation-duration: 68s;
+			animation-delay: 18s;
+		}
+		.authoranimationphotod2{
+			animation-duration: 62s;
+			animation-delay: 28s;
+		}
+		.authoranimationphotod3{
+			animation-duration: 63s;
+			animation-delay: 29s;
+		}
+		.authoranimationphotod4{
+			animation-duration: 60s;
+			animation-delay: 36s;
+		}	
+		.authoranimationphotod5{
+			animation-duration: 60s;
+			animation-delay: 40s;
+		}	
+		.authoranimationphotod6{
+			animation-duration: 62s;
+			animation-delay: 48s;
+		}
+		.authoranimationphotod7{
+			animation-duration: 62s;
+			animation-delay: 42s;
+		}
+
+	div[class^="authoranimationball"] {
+		position: absolute;
+		opacity: 0;	
+		top:10px;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-direction: normal;
+		animation-fill-mode: none; 
+		animation-play-state: running;
+	}
+	
+	.authoranimationballa{	
+
+		animation-name: ad ;
+		animation-duration: 70s; 
+		animation-delay: 0s ;}
+	.authoranimationballb{	
+		animation-name: ae ;
+		animation-duration: 70s; 
+		animation-delay: 0s ;}
+	.authoranimationballc{	
+		animation-name: aa ;
+		animation-duration: 73s; 
+		animation-delay:s 6s; }
+	.authoranimationballd{	
+		animation-name: ab ;
+		animation-duration: 78s; 
+		animation-delay: 8s ;}
+	.authoranimationballe{	
+		animation-name: ad ;
+		animation-duration: 74s; 
+		animation-delay: 9s ;}
+	.authoranimationballf{	
+		animation-name: ae ;
+		animation-duration: 69s; 
+		animation-delay: 11s; }
+	.authoranimationballg{	
+		animation-name: aa ;
+		animation-duration: 70s; 
+		animation-delay: 13s; }
+	.authoranimationballh{	
+		animation-name: ae ;
+		animation-duration: 77s; 
+		animation-delay: 15s; }
+	.authoranimationballi{	
+		animation-name: ad ;
+		animation-duration: 73s; 
+		animation-delay: 18s; }
+	.authoranimationballj{	
+		animation-name: ac ;
+		animation-duration: 65s; 
+		animation-delay: 19s; }
+	.authoranimationballk{	
+		animation-name: ae ;
+		animation-duration: 68s; 
+		animation-delay: 21s; }
+	.authoranimationballl{	
+		animation-name: ab ;
+		animation-duration: 68s; 
+		animation-delay: 22s; }
+	.authoranimationballm{	
+		animation-name: ac ;
+		animation-duration: 70s; 
+		animation-delay: 25s; }
+	.authoranimationballn{	
+		animation-name: ae ;
+		animation-duration: 63s; 
+		animation-delay: 27s; }
+	.authoranimationballo{	
+		animation-name: aa ;
+		animation-duration: 74s; 
+		animation-delay: 28s; }
+	.authoranimationballp{	
+		animation-name: ad ;
+		animation-duration: 78s; 
+		animation-delay: 30s; }
+	.authoranimationballq{	
+		animation-name: ad ;
+		animation-duration: 79s; 
+		animation-delay: 40s; }
+	.authoranimationballr{	
+		animation-name: ac ;
+		animation-duration: 73s; 
+		animation-delay: 45s; }
+	.authoranimationballs{	
+		animation-name: ae ;
+		animation-duration: 68s; 
+		animation-delay: 49s; }
+	.authoranimationballt{	
+		animation-name: ab ;
+		animation-duration: 68s; 
+		animation-delay: 53s; }
+	.authoranimationballu{	
+		animation-name: ac ;
+		animation-duration: 70s; 
+		animation-delay: 58s; }
+	.authoranimationballv{	
+		animation-name: ae ;
+		animation-duration: 73s; 
+		animation-delay: 60s; }
+	.authoranimationballw{	
+		animation-name: aa ;
+		animation-duration: 72s; 
+		animation-delay: 63s; }
+	.authoranimationballx{	
+		animation-name: ad ;
+		animation-duration: 66s; 
+		animation-delay: 80s; }
+	.authoranimationbally{	
+		animation-name: aa ;
+		animation-duration: 70s; 
+		animation-delay: 73s; }
+	.authoranimationballz{	
+		animation-name: ad ;
+		animation-duration: 70s; 
+		animation-delay: 78s; }
+
+	.authoranimationtheball{
+		background-color: #e3e3e2;
+		border-radius: 50%;
+		width:6px; height: 6.2px;
+		box-shadow: 1px 2px 3px rgba(71, 70, 104, 0.114);
+	}
+}
+.authorbottomphoto{
+		margin: auto;
+		width: 100%;
+		object-fit: contain;
+		position: relative;
+}
+#authorwinterbottom{ left:0; right:0;}
+
+@keyframes aa{
+    0% { top:-5px; left:20%; width:80px; opacity:0.4;}
+	30% { left: 50%; width:65px; rotate: 240deg; opacity:1;}
+    40% {	left: 37%;}
+    100% { top: 6900px; left: 60%;  opacity: 0.6; rotate:-1800deg}
+}
+@keyframes ab{
+    0% { top:-5px; left:40%; width:80px; opacity:0.4;}
+	20% { left: 26%; width:65px; rotate: -240deg; opacity:1;}
+    40% {	left: 49%;}
+    100% { top: 6900px; left: 60%;  opacity: 0.6; rotate: 1800deg}
+}
+
+@keyframes ac{
+    0% { top:-5px; left:80%; width:60px; opacity:0.4;}
+	10% { left: 74%; width:65px; opacity:1;}
+    50% {	left: 64%;}
+    100% { top: 6900px; left: 50%;  opacity: 0.6; rotate: 3000deg}
+}
+@keyframes ad{
+    0% { top:-5px; left:70%; width:70px; opacity:0.4;}
+	40% { left: 85%; width:65px; opacity:1;}
+    50% {	left: 80%;}
+    100% { top: 6900px; left: 83%;  opacity: 0.6; rotate: -400deg}
+}
+@keyframes ae{
+    0% { top:-5px; left:19%; width:70px; opacity:0.4;}
+	 40% { left: 30%; width:65px; opacity:1;}
+    50% {	left: 10%;}
+    100% { top: 6900px; left: 20%;  opacity: 0.6; rotate: -400deg}
+}
+
+
 /*************footer裡的東西*******************************/
 
 .footer{
@@ -383,7 +739,7 @@
  	text-align: center;
 
 	h2{	
-		font-family:"Platypi"; letter-spacing: ;
+		font-family:"Platypi"; 
 		margin: 9px;
 		font-size: 16px;
 		color: #fff6f2;
@@ -426,7 +782,6 @@
 	border-radius: 30%;
 	background-color: #e3e5e9;
 	margin:2.5%;
-	background-color:  #;
 
 	text-align: center; 
 	transition: all 0.4s;
@@ -464,13 +819,13 @@
 
 	.characphoto{
 		transition: all 0.7s;
-		height:90px; ;
-		border-style:  solid  ;  
+		height:90px; 
+		border-style:  solid ;  
 		border-color: #2f2a2f;
 		border-width:0.5px 5px 0.5px 5px ;
 		border-radius: 30%;
 		margin: 25px auto 2px auto;
-		border: 
+		
 	}
 }
 
@@ -539,6 +894,150 @@ div [class ^="characintroboxcontnt"] {
 	}
 
 }
+/**************AUTHOR*******************/
+.author{
+	h2{
+		clear: both;
+		margin: 15px 0 20px 0;
+		font-family:"Sassy Frass" ; 
+		text-shadow: 5px 6px 1px rgba(101, 90, 27, 0.413);
+		color: #3d3d3d;
+		text-align: center;
+
+		opacity: 0.98;
+		transition: all 0.7s;
+		font-size: 68px;
+		&:hover{
+			font-size: 72px;
+			opacity: 1;
+			text-shadow: 5px 6px 1px rgba(54, 81, 107, 0.432);
+			
+		}
+
+
+	}
+	h1{
+		
+		clear: both;
+		font-family:"Rock Salt" ; 
+		color: #f7ffebee;
+		text-shadow: 2px 2px 8px rgba(41, 47, 43, 0.842);
+		margin: 200px 0 70px 0;
+		height: 200px;
+		line-height:50px;
+		text-align: center;
+		opacity: 0;
+		transition: all 1.7s;
+		&:hover{
+			opacity: 1;
+		}
+	}
+}
+.photogallery{
+	margin:1%;
+	
+	img{
+		filter: drop-shadow(2px 4px 3px rgba(7, 7, 25, 0.7));
+		margin: 1%;
+		float: left;
+		border-radius:30px;
+		transition: all 0.4s;
+		opacity: 0.7;
+		&:hover{
+			cursor: url("image/heart.png"), pointer;
+			opacity: 1;
+			filter: drop-shadow(2px 3px 3px rgba(6, 5, 1, 0.916));
+		}
+	}
+	.one{
+			&:hover{
+				cursor: crosshair ;
+			}
+		}
+	.photogalleryhuge{
+		width: 70%;
+	}
+	.photogallerybig{
+		width: 44%;
+	}
+	.photogallerymedium{
+		width: 24%;
+	}
+	.photogallerysmall{
+		width: 20%;
+	}
+	.photogallerytiny{
+		width: 15%;
+	}
+	#clear{
+		clear:both;
+	}
+	#right{
+		float: right;
+	}
+	#clearright{
+		float: right;
+		clear:left;
+		;
+	}
+	#clearleft{
+		float: left;
+		
+	}
+	
+	&:hover{
+		font-size: 34px;
+			.yearsofphoto{
+				opacity: 1;
+				p{
+					color: #424242;
+					text-shadow: 5px 6px 1px rgba(40, 65, 55, 0.432);
+				}
+			}
+	}
+	.yearsofphoto{
+		font-family:"Rock Salt" ; 
+		width: 20%;
+		background-color:; #37323a;
+		float: left;
+		text-align: right;
+		opacity: 0.9;
+		p{
+			transition: all 0.5s;
+			font-weight: bolder;
+			margin:0;
+			text-shadow: 5px 6px 1px rgba(51, 67, 27, 0.413);
+			color: #606060;
+			letter-spacing: 3px;
+			
+		}
+		
+	}
+	
+
+
+}
+
+/* youtube 介面的東東
+.candentiayoutube{
+	text-align: ;
+	
+	.authorphoto{
+		transition: all 0.7s; 
+		width:30%; 
+		border-style:solid;  
+		border-color: #2f2a2f;
+		border-width:3px ;
+		border-radius: 50%;
+		margin: 30px;
+	}
+	.youtubename{
+		font-family:"Protest Guerrilla";
+		font-size: 50px;
+		color: #cdc8de;
+	}
+}
+*/
 
 /************DISCUSSION*******************/
 
@@ -623,7 +1122,8 @@ div [class ^="characintroboxcontnt"] {
 		color: #3a3e41;
 	}
 	div[class*="backandnext"]{
-		font-family: "Montserrat Subrayada";  font-weight: ; letter-spacing:1px;
+		font-family: "Montserrat Subrayada";  
+		letter-spacing:1px;
 		position: relative;
 		height: 50px; line-hdight: 50px;
 		display: inline-block;
@@ -650,7 +1150,7 @@ div [class ^="characintroboxcontnt"] {
 
 h2{
 	margin: 30px 0 0 0;
-	font-family: "Platypi";; font-weight: bold; 
+	font-family: "Platypi"; font-weight: bold; 
 	color: #112423;
 	text-align: center;
 }
@@ -670,12 +1170,56 @@ h2{
 		margin: 5px 3px 25px 3px;
 	}
 	.b{
-		font-size: 25px;
+		font-size: 30px;
 	}
-	.c4paper{
+	.endofbook{
+		width:70%;
+		text-indent: 0;
+		margin: 60px auto 30px;
+	}
+	.c6paper/*故事內容的信件們 B1.c6報紙*/{
 		width:60%;
 		margin: auto;
 		text-indent: 0;
+		#alice{
+			font-weight: bold;
+			font-family: "Alice";
+		}
+	}
+	.esenletter/*故事內容 B1 ch8. esen的信件*/{
+		width:80%;
+		margin:30px auto;
+		text-indent: 0;
+		i{
+			font-family: "Quintessential";
+		}
+	}
+	.aureliusletter/*ch12 Aurelius 給 Tsahn 的離別信*/{
+		font-family: "Alex Brush";
+		width:80%;
+		margin:30px auto;
+		text-indent: 0;
+		.aureliusletternames{
+			font-size: 35px;
+		}
+		.aureliusletterfootage{
+			text-align: right;
+			.aureliusletterfootageregards{
+				font-size: 23px;
+				width:82%;
+			}
+		}
+		.aureliuslettercontent{
+			
+			font-size: 23px;
+			width:90%;
+			margin:20px auto;
+		}
+	}
+	.b2ch2song{
+		width: 80%;
+		margin:auto;
+		
 	}
 }
 
@@ -713,11 +1257,12 @@ h2{
 }
 
 /*************************story 裏的東西們************/
+
 .bookone {
 	margin: 50px auto 30px auto;
 	font-size: 50px;
 	font-family: "Shadows Into Light"; font-weight: bold;
-	}
+}
 
 .storyinside{
 		column-count:2;
@@ -750,7 +1295,19 @@ h2{
 		}
 		&:active{color:#111;}
 	}
-
+}
+.commingsoon{
+	font-family: "Rock Salt";
+	color:#8f8d8d;
+	h2{
+		color:rgb(81, 76, 76);
+		transition: all 1s;
+		font-family: "Protest Revolution" 
+	}
+	&:hover{
+		text-shadow: 1px 2px 3px rgba(87, 88, 91, 0.521);
+		h2{	color:#37333a;}
+	}
 }
 /************************HOME************/
 
@@ -827,7 +1384,7 @@ h2{
 	width: 95%; 
 	vertical-align: middle;
 	text-align: center;
-	margin: 0 auto 20px; auto;
+	margin: 0 auto 20px; 
 	border-radius: 5%;
 	transition: background 0.4s linear;
 	.gadgetswhat{
@@ -876,45 +1433,4 @@ h2{
 
 
 }
-
-
-/************************超連結統一換************/
-
-
-
-
-
-	
-
-
-
-
-/*************************字體統一換************/
-
-
-
-.Playball/*top封面頁的標題*/{
-
 }
-
-/*****chapter***/
-
-p/*故事內容*/{
-
-}
-
-.alice/*故事內容的信件們1.c4報紙*/{
-	font-family: {"Alice"}
-}
-
-
-.momreadingbook /*c2中Aestas在做夢中他媽念的故事書內容*/{
-
-}
-
-
-
-
-
-
-
